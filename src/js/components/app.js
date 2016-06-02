@@ -1,6 +1,7 @@
 import React from 'react';
 import Catalogue from './catalogue/app-catalogue';
 import Cart from './cart/app-cart';
+import CatalogueDetail from './product/app-catalogue-detail'
 import Template from './app-template';
 import {Router, Route, IndexRoute } from 'react-router';
 
@@ -10,6 +11,7 @@ export default () => {
       <Route path="/" component={Template}>
         <IndexRoute component={ Catalogue }/>
         <Route path="cart" component = {Cart} />
+        <Route path="item/:item" component = {CatalogueDetail} />
       </Route>
     </Router>
   )
